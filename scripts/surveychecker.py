@@ -36,4 +36,9 @@ def checkdns(names):
 def nodns(names):
     return [name for name, result in checkdns(names) if result is None]
 
-print('\n'.join(nodns(not_in_survey)))
+def yesdns(names):
+    return [name for name, result in checkdns(names) if result is not None]
+
+#print('\n'.join(nodns(not_in_survey)))
+
+print('\n'.join(yesdns(not_in_survey)))
