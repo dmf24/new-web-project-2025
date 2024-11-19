@@ -51,7 +51,7 @@ def isdev(site):
 sitetypes = set()
 
 for site in o2sites:
-    for t in site['types']:
+    for t in site.get('types', []):
         sitetypes.add(t)
 
 for name in yesdns(not_in_survey):
