@@ -52,7 +52,8 @@ sitetypes = set()
 
 for site in o2sites:
     for t in site.get('types', []):
-        sitetypes.add(t)
+        if t.strip() != '':
+            sitetypes.add(t)
 
 for name in yesdns(not_in_survey):
     site = o2sitesbyname[name]
