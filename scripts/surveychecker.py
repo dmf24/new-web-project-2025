@@ -44,6 +44,6 @@ def yesdns(names):
 
 for name in yesdns(not_in_survey):
     site = o2sitesbyname[name]
-    print(name, ','.join(site['types']))
+    print("%s %s" % (name, ','.join(site['types'])))
 
-print('\n'.join(yesdns(not_in_survey)))
+#print('\n'.join(yesdns(not_in_survey)))
