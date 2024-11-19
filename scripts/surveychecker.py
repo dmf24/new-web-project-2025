@@ -81,7 +81,4 @@ for name in yesdns(not_in_survey):
     if not isdev(site) and istype(site, ['app', 'web', 'proxy']):
         print(name)
     #print("%s %s" % (','.join(site.get('types', ['none'])), name))
-
-pp(sitetypes)
-
 #print('\n'.join(yesdns(not_in_survey)))
