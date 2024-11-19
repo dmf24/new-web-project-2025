@@ -48,6 +48,12 @@ def isdev(site):
             return True
     return False
 
+sitetypes = set()
+
+for site in surveydata:
+    for t in site['types']:
+        sitetypes.add(t)
+
 for name in yesdns(not_in_survey):
     site = o2sitesbyname[name]
     site.get('types', ['none'])
@@ -55,5 +61,7 @@ for name in yesdns(not_in_survey):
     if not isdev(site):
         print(name)
     #print("%s %s" % (','.join(site.get('types', ['none'])), name))
+
+pp(sitetypes)
 
 #print('\n'.join(yesdns(not_in_survey)))
