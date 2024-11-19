@@ -111,3 +111,5 @@ kreiman.hms.harvard.edu,"Kreiman, Gabriel",gabriel.kreiman@tch.harvard.edu,,Y,Re
 mootha.med.harvard.edu,"Mootha, Vamsi",vamsi@hms.harvard.edu,,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML,Lab Site,Brochure site,
 kiefflab.hms.harvard.edu,,,,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML,Lab Site,Brochure site.  PI has passed.,
 cbdm.hms.harvard.edu,"Benoist, Christophe",cb@hms.harvard.edu,,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML+Javascript,Lab Site,Brochure site,
+marker.hms.harvard.edu,"Savova, Virginia",Virginia_Savova@hms.harvard.edu,,Y,Research connected,Consider for alternate,PHP,Specialized Tool,Gene search tool.,
+mouse2.hms.harvard.edu,"Benoist, Christophe",cb@hms.harvard.edu,,Y,Research connected,Consider for alternate,Java/Tomcat,Specialized Tool,"Users download a java-based thin client, which uses the tomcat site running on O2.",
