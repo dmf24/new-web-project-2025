@@ -107,4 +107,7 @@ api.evcouplings.org,"Marks, Debora",debora_marks@hms.harvard.edu,,Y,Research con
 graylab.hms.harvard.edu,"Harmin, David",david_harmin@hms.harvard.edu,,Y,Research connected,Consider for alternate,Raw HTTP,File and Data,,
 yin.hms.harvard.edu,"Yin, Peng",py@hms.harvard.edu,,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML,Lab Site,Brochure site,
 q2m.hms.harvard.edu,"Mootha, Vamsi",vamsi@hms.harvard.edu,,N,Brochure Site,Complete the retirement,HTML,Program site,Questions in Quantitative Medicine program appears obsolete.,
-kreiman.hms.harvard.edu,"Kreiman, Gabriel",gabriel.kreiman@tch.harvard.edu,,Y,Research connected,Consider for alternate,HTML,Specialized Tool,https://kreiman.hms.harvard.edu/braininteractome/ is a javascript-based visualization tool.,
+kreiman.hms.harvard.edu,"Kreiman, Gabriel",gabriel.kreiman@tch.harvard.edu,,Y,Research connected,Consider for alternate,HTML+Javascript,Specialized Tool,https://kreiman.hms.harvard.edu/braininteractome/ is a javascript-based visualization tool.,
+mootha.med.harvard.edu,"Mootha, Vamsi",vamsi@hms.harvard.edu,,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML,Lab Site,Brochure site,
+kiefflab.hms.harvard.edu,,,,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML,Lab Site,Brochure site.  PI has passed.,
+cbdm.hms.harvard.edu,"Benoist, Christophe",cb@hms.harvard.edu,,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML+Javascript,Lab Site,Brochure site,
