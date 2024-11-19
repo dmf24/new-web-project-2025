@@ -71,7 +71,7 @@ xtypes = dict(
 
 def istype(site, apptypes):
     for apptype in apptypes:
-        for t in site['types']:
+        for t in site.get('types', []):
             if t in xtypes[apptype]:
                 return True
 
