@@ -50,7 +50,7 @@ def isdev(site):
 
 sitetypes = set()
 
-for site in surveydata:
+for site in o2sites:
     for t in site['types']:
         sitetypes.add(t)
 
