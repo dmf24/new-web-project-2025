@@ -42,8 +42,18 @@ def yesdns(names):
 
 #print('\n'.join(nodns(not_in_survey)))
 
+def isdev(site):
+    for m in site.get('memberof', []):
+        if 'dev' in m:
+            return True
+    return False
+
 for name in yesdns(not_in_survey):
     site = o2sitesbyname[name]
-    print("%s %s" % (','.join(site.get('types', ['none'])), name))
+    site.get('types', ['none'])
+    site.get('memberof', [])
+    if not isdev(site):
+        print(name)
+    #print("%s %s" % (','.join(site.get('types', ['none'])), name))
 
 #print('\n'.join(yesdns(not_in_survey)))
