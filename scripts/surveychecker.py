@@ -55,11 +55,30 @@ for site in o2sites:
         if t.strip() != '':
             sitetypes.add(t)
 
+xtypes = dict(
+    app=['celery',
+         'gunicorn',
+         'jupyterhub',
+         'multigunicorn',
+         'shellscript',
+         'supervisord'],
+    redirect=['redirect',
+              'redirect301'],
+    proxy=['proxy',
+           'raw-proxy'],
+    web=['nginx', 'httpd24'],
+    other=['redis'])
+
+def istype(site, apptypes):
+    for apptype in apptypes:
+        for t in site['types']:
+            if t in xtypes[apptype]:
+                return True
+
 for name in yesdns(not_in_survey):
     site = o2sitesbyname[name]
-    site.get('types', ['none'])
-    site.get('memberof', [])
-    if not isdev(site):
+    stypes = site.get('types', ['none'])
+    if not isdev(site) and istype(site, ['app', 'web', 'proxy']):
         print(name)
     #print("%s %s" % (','.join(site.get('types', ['none'])), name))
 
