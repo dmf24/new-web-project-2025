@@ -16,7 +16,7 @@ surveycsv = open(join(datadir, 'o2web-surveyplus-2024.csv')).readlines()
 reader=csv.reader(surveycsv)
 surveydata = [row for row in reader][1:]
 
-o2sitesbyname = {{site['name']: site} for site in o2sites}
+o2sitesbyname = dict([(site['name'], site) for site in o2sites])
 o2sitenames = set([site['name'] for site in o2sites])
 trimnames = set([x[0] for x in surveydata])
 
