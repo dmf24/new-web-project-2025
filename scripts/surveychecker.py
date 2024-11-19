@@ -75,10 +75,13 @@ def istype(site, apptypes):
             if t in xtypes[apptype]:
                 return True
 
-for name in yesdns(not_in_survey):
-    site = o2sitesbyname[name]
-    stypes = site.get('types', ['none'])
-    if not isdev(site) and istype(site, ['app', 'web', 'proxy']):
-        print(name)
-    #print("%s %s" % (','.join(site.get('types', ['none'])), name))
+def surveycheck():
+    for name in yesdns(not_in_survey):
+        site = o2sitesbyname[name]
+        stypes = site.get('types', ['none'])
+        if not isdev(site) and istype(site, ['app', 'web', 'proxy']):
+            print(name)
+
+surveycheck()
+#print("%s %s" % (','.join(site.get('types', ['none'])), name))
 #print('\n'.join(yesdns(not_in_survey)))
