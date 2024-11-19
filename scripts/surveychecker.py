@@ -16,6 +16,7 @@ surveycsv = open(join(datadir, 'o2web-surveyplus-2024.csv')).readlines()
 reader=csv.reader(surveycsv)
 surveydata = [row for row in reader][1:]
 
+o2sitesbyname = {{site['name']: site} for site in o2sites}
 o2sitenames = set([site['name'] for site in o2sites])
 trimnames = set([x[0] for x in surveydata])
 
@@ -40,5 +41,9 @@ def yesdns(names):
     return [name for name, result in checkdns(names) if result is not None]
 
 #print('\n'.join(nodns(not_in_survey)))
+
+for name in yesdns(not_in_survey):
+    site = o2sitesbyname[name]
+    print(name, ','.join(site['types']))
 
 print('\n'.join(yesdns(not_in_survey)))
