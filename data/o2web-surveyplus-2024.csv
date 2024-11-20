@@ -48,7 +48,7 @@ f-utility.hms.harvard.edu,"Walker, Suzanne",suzanne_walker@hms.harvard.edu,Y,Y,R
 fgrtools.hms.harvard.edu,"Hu, Claire",claire_hu@genetics.med.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,"PHP, Perl, Java/Tomcat",Specialized Tool,Extensive selection of online genomics tools.
 fly.med.harvard.edu,"Tabor, Stanley",tabor@hms.harvard.edu,Y,N,Research connected,,Jbrowse,Specialized Tool,"Password-protected site, looks like installation of JBrowse Genome Browser"
 flybi.hms.harvard.edu,"Hu, Claire",claire_hu@genetics.med.harvard.edu,Y,Y,Data sharing only,Consider for remaining on O2,PHP,File and Data,"Simple PHP data sharing site, but this is same group responsible for fgrtools.hms.harvard.edu and www.flyrnai.org"
-flyrnai-o2apps.hms.harvard.edu,"Comjean, Aram",acomjean@genetics.med.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,"PHP, Perl",Specialized Tool,DRSC/TRiP Genomics Tools
+flyrnai-o2apps.hms.harvard.edu,"Hu, Claire",claire_hu@genetics.med.harvard.eduu,Y,Y,Research connected,Consider for remaining on O2,"PHP, Perl",Specialized Tool,DRSC/TRiP Genomics Tools
 genomebrowser-uploads.hms.harvard.edu,"Karger, Amir",amir_karger@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,Raw HTTP,File and Data,Allows Orchestra users to upload data and provide a public URL for use with the UCSC Genome Browser
 gentb.hms.harvard.edu,"Farhat, Maha",maha_farhat@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,Gunicorn,Specialized Tool,"Translational Genomics of Tuberculosis, includes a Python-based Web Application"
 graylab.hms.harvard.edu,"Harmin, David",david_harmin@hms.harvard.edu,Y,Y,Research connected,Consider for alternate,Raw HTTP,File and Data,
@@ -116,7 +116,7 @@ tcmp-core.hms.harvard.edu,"Mintseris, Julian",julian_mintseris@hms.harvard.edu,Y
 test.mhl.countway.harvard.edu,"Gustainis, Emily R. Novak",Emily_Gustainis@hms.harvard.edu,Y,Y,Library,Consider for alternate,Java/Tomcat,Library Site,Apache Solr Tomcat Application that powers mhl.countway.harvard.edu
 testing.reichdna.hms.harvard.edu,"Mah, Matthew",matthew_Mah@hms.harvard.edu,Y,N,Research connected,Consider for remaining on O2,Gunicorn,Specialized Tool,Development environment for Matthew Mah of Reich Lab
 text2term.hms.harvard.edu,"Goncalves, Rafael",rafael_goncalves@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,Gunicorn+node.js,Specialized Tool,Python-based web service for mapping free-text descriptions of (biomedical) entities to controlled terms in an ontology
-timeor.hms.harvard.edu,"Comjean, Aram",acomjean@genetics.med.harvard.ed,Y,N,Research connected,,,,This site may be unfinished
+timeor.hms.harvard.edu,"Hu, Claire",claire_hu@genetics.med.harvard.edu,Y,N,Research connected,,,,This site may be unfinished
 v2.evcouplings.org,"Marks, Debora",debora_marks@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,Complex,Specialized Tool (HPC),HPC-backed Web Application for Evolutionary Couplings and Protein Prediction (Version 2)
 vcp.med.harvard.edu,"Gunawardena, Jeremy",jeremy@hms.harvard.edu,Y,Y,Brochure Site,Consider for SaaS (WP or Drupal),PHP,Lab Site,
 virptm.hms.harvard.edu,"Church, George McDonald",george_church@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,HTML,Specialized Tool,"Collection and motif-based prediction of phosphorylation sites in human viruses. Sci. Signal. 3, rs2 (2010)"
