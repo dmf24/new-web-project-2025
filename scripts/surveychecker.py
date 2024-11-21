@@ -6,13 +6,14 @@ from pprint import pprint as pp
 import json
 import socket
 
+repodir = '/home/dmf24/webconf2-repo'
 
 o2sites = json.loads(open('/home/dmf24/webconf2-repo/build/sites.json').read())
 
 scriptdir = os.path.dirname(os.path.abspath(sys.argv[0]))
 datadir = join(scriptdir, os.path.pardir, 'data')
 
-surveycsv = open(join(datadir, 'o2web-surveyplus-2024.csv')).readlines()
+surveycsv = open(join(datadir, 'o2web-surveyplus-2024.csv'), encoding='iso-8859-1').readlines()
 reader=csv.reader(surveycsv)
 surveydata = [row for row in reader][1:]
 
@@ -82,6 +83,27 @@ def surveycheck():
         if not isdev(site) and istype(site, ['app', 'web', 'proxy']):
             print(name)
 
-surveycheck()
+header = ['name', 'primary-contact', 'primary-email', 'o2_www', 'active-traffic', 'site-type', 'recommendation','technology','site-type-2', 'note']
+
+for row in surveydata:
+    site = dict(zip(header, row))
+    sitedir = join(repodir, 'registry', 'sites', site['name'])
+    metadir = join(sitedir, 'metadata')
+    if not os.path.isdir(metadir):
+        os.mkdir(metadir)    
+    #for x in ['primary-contact', 'primary-email', 'recommendation', 'o2_www']:
+    for x in ['technology', 'site-type', 'site-type-2']:
+        with open(join(metadir, x), 'w') as f:
+            f.write(site[x])
+            f.write('\n')
+    with open(join(metadir, 'readme.md'), 'w') as f:
+        f.write('''This directory was created in 2024 to record, in a centralized place, contact information and notes on important, visible sites.
+        Note: {note}
+        The 'site-type', 'site-type-2' and 'technology' values are NOT configuration values, they are merely survey assessments tracked here.
+        '''.format(**site))
+#    print('{name} {primary-contact} {primary-email}'.format(**site))
+    
+
+#surveycheck()
 #print("%s %s" % (','.join(site.get('types', ['none'])), name))
 #print('\n'.join(yesdns(not_in_survey)))
