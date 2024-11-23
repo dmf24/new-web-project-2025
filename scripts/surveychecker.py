@@ -17,6 +17,13 @@ surveycsv = open(join(datadir, 'o2web-surveyplus-2024.csv'), encoding='iso-8859-
 reader=csv.reader(surveycsv)
 surveydata = [row for row in reader][1:]
 
+o2dbs_fname = join(datadir, 'databases-sites-users.csv')
+o2dbs_csv = open(o2dbs_fname).readlines()
+o2dbs_reader = csv.reader(o2dbs_csv)
+o2dbdata = [row for row in o2dbs_reader]
+
+
+
 o2sitesbyname = dict([(site['name'], site) for site in o2sites])
 o2sitenames = set([site['name'] for site in o2sites])
 trimnames = set([x[0] for x in surveydata])
@@ -30,6 +37,13 @@ def host(name):
         return socket.gethostbyname(name)
     except socket.gaierror:
         return None
+
+def finddbs(site):
+    results = []
+    for row in o2dbdata:
+        if site == row[2]:
+            results.append(row[:2])
+    return results
 
 def checkdns(names):
     for name in names:
@@ -85,25 +99,60 @@ def surveycheck():
 
 header = ['name', 'primary-contact', 'primary-email', 'o2_www', 'active-traffic', 'site-type', 'recommendation','technology','site-type-2', 'note']
 
-for row in surveydata:
-    site = dict(zip(header, row))
-    sitedir = join(repodir, 'registry', 'sites', site['name'])
-    metadir = join(sitedir, 'metadata')
-    if not os.path.isdir(metadir):
-        os.mkdir(metadir)    
-    #for x in ['primary-contact', 'primary-email', 'recommendation', 'o2_www']:
-    for x in ['technology', 'site-type', 'site-type-2']:
-        with open(join(metadir, x), 'w') as f:
-            f.write(site[x])
-            f.write('\n')
-    with open(join(metadir, 'readme.md'), 'w') as f:
-        f.write('''This directory was created in 2024 to record, in a centralized place, contact information and notes on important, visible sites.
-        Note: {note}
-        The 'site-type', 'site-type-2' and 'technology' values are NOT configuration values, they are merely survey assessments tracked here.
-        '''.format(**site))
-#    print('{name} {primary-contact} {primary-email}'.format(**site))
-    
+def writemetafields():
+    for row in surveydata:
+        site = dict(zip(header, row))
+        sitedir = join(repodir, 'registry', 'sites', site['name'])
+        metadir = join(sitedir, 'metadata')
+        if not os.path.isdir(metadir):
+            os.mkdir(metadir)    
+        #for x in ['primary-contact', 'primary-email', 'recommendation', 'o2_www']:
+        for x in ['technology', 'site-type', 'site-type-2']:
+            with open(join(metadir, x), 'w') as f:
+                f.write(site[x])
+                f.write('\n')
+        with open(join(metadir, 'readme.md'), 'w') as f:
+            f.write('''This directory was created in 2024 to record, in a centralized place, contact information and notes on important, visible sites.
+            Note: {note}
+            The 'site-type', 'site-type-2' and 'technology' values are NOT configuration values, they are merely survey assessments tracked here.\n'''.format(**site))
 
-#surveycheck()
-#print("%s %s" % (','.join(site.get('types', ['none'])), name))
-#print('\n'.join(yesdns(not_in_survey)))
+def getalldbs():
+    results = []
+    for row in surveydata:
+        site = dict(zip(header, row))
+        sitedir = join(repodir, 'registry', 'sites', site['name'])
+        metadir = join(sitedir, 'metadata')
+        dbs = finddbs(site['name'])
+        print(site['name'], ','.join([':'.join(db) for db in dbs]))
+
+def surveyq(field, values):
+    results = []
+    for row in surveydata:
+        site = dict(zip(header, row))
+        if site[field] in values:
+            results.append((site[field], site['name']))
+    return sorted(results)
+
+def surveyqi(field, values):
+    results = set([])
+    for row in surveydata:
+        site = dict(zip(header, row))
+        for value in values:
+            if value in site[field]:
+                results.add((site[field], site['name']))
+    return sorted(list(results))
+
+def showstuff(txt, field, values):
+    lst = surveyqi(field, values)
+    print()
+    print("%s:" % txt, len(lst))
+    for x in lst:
+        print("%s %s" % x)
+
+showstuff("Complex sites:", 'technology', ['Complex'])
+showstuff('Apache-based', 'technology', ['PHP', 'HTML', 'Raw HTTP', 'CGI'])
+showstuff('Appservers', 'technology', ['Gunicorn'])
+showstuff('Tomcat', 'technology', ['Tomcat'])
+
+getalldbs()
+#showstuff('blank', 'technology', [''])

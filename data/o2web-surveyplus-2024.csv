@@ -7,13 +7,11 @@ baymlab.hms.harvard.edu,"Baym, Michael",baym@hms.harvard.edu,Y,Y,Brochure Site,C
 becklab-apps.hms.harvard.edu,"Cheol, Jong",jjeong@kcr.uky.edu,Y,N,Research connected,Complete the retirement,CGI,Specialized Tool,"Web-based applications site, all associated accounts appear to be closed, site not receiving traffic"
 bioplex.rc.hms.harvard.edu,"Huttlin, Edward",edward_huttlin@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,PHP,Specialized Tool,Custom PHP site (not Wordpress/Drupal)
 biseqle.hms.harvard.edu,"Peshkin, Leon",leonid_peshkin@hms.harvard.edu,Y,N,Research connected,Consider for remaining on O2,PHP+CGI(Python),Specialized Tool (HPC),"Slurm-connected application, was never high-traffic, should confirm with Leon before retiring."
-bmi701.hms.harvard.edu,,,Y,,Not in use,Complete the retirement,n/a,n/a,
 carman.hms.harvard.edu,"Carman, Christopher Vincent",ccarman@hsph.harvard.edu,Y,Y,Brochure Site,Consider for alternate,PHP,Lab Site,Custom PHP site (not Wordpress/Drupal)
 cbdm.hms.harvard.edu,"Benoist, Christophe",cb@hms.harvard.edu,Y,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML+Javascript,Lab Site,Brochure site
 ccb-rstudio-connect.hms.harvard.edu,"Geistlinger, Ludwig",Ludwig_Geistlinger@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,Posit Connect,Posit Connect,RDVP Project: Posit Connect
 ccb-rstudio-testing.rc.hms.harvard.edu,"Geistlinger, Ludwig",Ludwig_Geistlinger@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,Posit Connect,Posit Connect,RDVP Project: Posit Connect
 celehs.hms.harvard.edu,"Cai, Tianxi",tcai@hsph.harvard.edu,Y,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML,Lab Site,"Brochure site, formerly hosted some python-based research tools."
-collections.countway.harvard.edu,"Lapinski, Scott",p_lapinski@hms.harvard.edu,Y,N,Not in use,Complete the retirement,PHP (5.6),Library Site,Confirmed this site has already moved off O2 Web Hosting
 community.virtual-flow.org,"Gorgulla, Christoph",christoph_gorgulla@hms.harvard.edu,N,Y,Research connected,Consider for alternate,Discourse (Ruby),Forum Site,"This site runs Discourse, which has a fully-automated docker-based deployment model."
 contribution.countway.harvard.edu,"Lapinski, Scott",p_lapinski@hms.harvard.edu,Y,N,Library,Consider for alternate,PHP (5.6),Library Site,"DNS still points to O2 Web Hosting, unsure if these URLs are still active they get minimal traffic."
 corecop.hms.harvard.edu,"Peshkin, Leon",leonid_peshkin@hms.harvard.edu,Y,N,Research connected,Consider for remaining on O2,PHP+CGI(Python),Specialized Tool (HPC),"Slurm-connected application, was never high-traffic, should confirm with Leon before retiring."
@@ -32,11 +30,8 @@ cryosparc-wagner.rc.hms.harvard.edu,"Wagner, Gerhard",gerhard_wagner@hms.harvard
 daleystem.hms.harvard.edu,"Daley, George",George_Daley@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,PHP+Perl,Specialized Tool,CodeIgniter (CI) 2.0 web application (PHP+Perl)
 demo.screensaver.med.harvard.edu,"Shamu, Caroline Elizabeth",caroline_shamu@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,Gunicorn,Specialized Tool,Custom Python/Django-based Site
 dev.ccb-rstudio-connect.hms.harvard.edu,"Lee, Tyrone",tyrone_lee@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,Posit Connect,Posit Connect,Development site for ccb-rstudio-connect.hms.harvard.edu (consider dropping from spreadsheet)
-dev.lioutas.hms.harvard.edu,"Lioutas, Antonios",antonios_lioutas@hms.harvard.edu,Y,N,Not in use,Complete the retirement,n/a,n/a,
 dev.reichdna.hms.harvard.edu,"Rohland, Nadin",nrohland@genetics.med.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,CGI (Perl),Specialized Tool,perl-based CGI site for lab database and workflow.
 dev.shiny.rc.hms.harvard.edu,"Feldmann, Douglas",douglas_feldmann@hms.harvard.edu,Y,N,Research connected,Complete the retirement,n/a,n/a,Test site for open source version of RStudio Server (Posit).
-dev.www.cdpcenter.org,"Muhlich, Jeremy",jeremy_muhlich@hms.harvard.edu,Y,N,Brochure Site,Complete the retirement,n/a,n/a,"Development site for www.cdpcenter.org, which is defunct."
-dev.www.cdpcenter.org,"Muhlich, Jeremy",jeremy_muhlich@hms.harvard.edu,Y,N,Brochure Site,Complete the retirement,n/a,n/a,"Development site for www.cdpcenter.org, which is defunct."
 elab-acc.hms.harvard.edu,"Coplan, Neil",neil_Coplan@hms.harvard.edu,N,Y,Research connected,Consider for remaining on O2,Proxy,Specialized Tool,This site's only connection to O2 Web Hosting is the HAProxy Loadbalancer
 elab-oos.hms.harvard.edu,"Coplan, Neil",neil_Coplan@hms.harvard.edu,N,Y,Research connected,Consider for remaining on O2,Proxy,Specialized Tool,This site's only connection to O2 Web Hosting is the HAProxy Loadbalancer
 elab.hms.harvard.edu,"Coplan, Neil",neil_Coplan@hms.harvard.edu,N,Y,Research connected,Consider for remaining on O2,Proxy,Specialized Tool,This site's only connection to O2 Web Hosting is the HAProxy Loadbalancer
@@ -54,21 +49,18 @@ gentb.hms.harvard.edu,"Farhat, Maha",maha_farhat@hms.harvard.edu,Y,Y,Research co
 graylab.hms.harvard.edu,"Harmin, David",david_harmin@hms.harvard.edu,Y,Y,Research connected,Consider for alternate,Raw HTTP,File and Data,
 gygilab-tcmp-web.med.harvard.edu,"Mintseris, Julian",julian_mintseris@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,tcmp,Specialized Tool,Custom VM set up for Gygi Lab.
 healthnlp.hms.harvard.edu,"Savova, Guergana",Guergana.Savova@childrens.harvard.edu,Y,Y,Research connected,Consider for alternate,PHP,Project site,MediaWiki(PHP).
-healthysleep.med.harvard.edu,"Quan, Stuart",stuart_Quan@hms.harvard.edu,Y,N,Not in use,Complete the retirement,n/a,n/a,"Site has technically been getting a lot of traffic, but 99.2% of requests have returned ""Server Error (500)"" for over a year now and no one has complained."
 hmsrsc.aws.hms.harvard.edu,"Coplan, Neil",Neil_Coplan@hms.harvard.edu,N,N,Research connected,Consider for remaining on O2,Redirect,Posit Connect,I believe a paper has a URL using this name.  This is a redirect to rubinlab.connect.hms.harvard.edu
 iac.hms.harvard.edu,"Nørrelykke, Simon F.",simon@hms.harvard.edu,Y,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML,Lab Site,Image Analysis Collaboratory website
 interactome-dev.hms.harvard.edu,"Huttlin, Edward",edward_huttlin@hms.harvard.edu,N,Y,Research connected,Consider for remaining on O2,Custom Machine,Specialized Tool,Endpoint for gygilabmasspec02
 interactome.hms.harvard.edu,"Huttlin, Edward",edward_huttlin@hms.harvard.edu,N,Y,Research connected,Consider for remaining on O2,Custom Machine,Specialized Tool,Endpoint for gygilabmasspec02
 jedi.hms.harvard.edu,"Yang, Liang",lyang@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,Java/Tomcat,Specialized Tool,Joslin Expression Database (Java+Tomcat). CBDM Lab
 kiefflab.hms.harvard.edu,,,Y,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML,Lab Site,Brochure site.  PI has passed.
-kirschner-o2apps.hms.harvard.edu,"Peshkin, Leon",leonid_peshkin@hms.harvard.edu,Y,N,Not in use,Complete the retirement,n/a,n/a,Transition site for Orchestra to O2 Web migration of Kirschner Lab tools.
 kirschner.med.harvard.edu,"Peshkin, Leon",leonid_peshkin@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,PHP+CGI,Specialized Tool,"The home page for this site redirects to kirschner.hms.harvard.edu(not O2Web), but many other URLs remain active and used."
 kleintools.hms.harvard.edu,"Klein, Allon",allon_klein@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,CGI (python),Specialized Tool,"Various tools including SPRING, a tool for uncovering high-dimensional structure in single-cell gene expression data. https://kleintools.hms.harvard.edu/tools/spring.html"
 kreiman.hms.harvard.edu,"Kreiman, Gabriel",gabriel.kreiman@tch.harvard.edu,Y,Y,Research connected,Consider for alternate,HTML+Javascript,Specialized Tool,https://kreiman.hms.harvard.edu/braininteractome/ is a javascript-based visualization tool.
 kucherlapati.hms.harvard.edu,"Kucherlapati, Melanie",mkucherlapati@partners.org,Y,Y,Data sharing only,Consider for remaining on O2,Raw HTTP,File and Data,Owner has confirmed she uses the site. There's no home page just a directory with 16T+ of data (from /n/groups).
 libraryofevidence.med.harvard.edu,"Ventrano, Nicole",nvetrano@bwh.harvard.edu,Y,Y,Library,Consider for alternate,Java/Tomcat,Library Site,"Java+Tomcat site at https://libraryofevidence.med.harvard.edu/app. From the home page, select ""Access the Library"""
 lincs.hms.harvard.edu,"Sorger, Peter",peter_sorger@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,PHP+CGI(python),Specialized Tool,Interactive database: https://lincs.hms.harvard.edu/db/ (Python/Django via CGI)
-lioutas.hms.harvard.edu,"Lioutas, Antonios",antonios_lioutas@hms.harvard.edu,Y,N,Not in use,Complete the retirement,n/a,n/a,"R Shiny web server, never developed."
 livecryosparc-farnung.rc.hms.harvard.edu,"Farnung, Lucas",Lucas_Farnung@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,CryoSparc,Specialized Tool,Scientific web application that submits batch jobs to run Cryo-EM analysis on GPUs
 mae.hms.harvard.edu,"Savova, Virginia",Virginia_Savova@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,PHP,Specialized Tool,Tool for exploring monoallelic expression database. (PHP+Javascript)
 mami.med.harvard.edu,"Kohane, Zak",isaac_kohane@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,PHP,Specialized Tool,"Online genomics tool. VERY old site (2006-2007). Traffic may be bots, hard to say."
@@ -80,7 +72,6 @@ molmed.med.harvard.edu,"Birrane, Gabriel",gabriel_birrane@hms.harvard.edu,Y,Y,Re
 mootha.med.harvard.edu,"Mootha, Vamsi",vamsi@hms.harvard.edu,Y,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML,Lab Site,Brochure site
 mouse2.hms.harvard.edu,"Benoist, Christophe",cb@hms.harvard.edu,Y,Y,Research connected,Consider for alternate,Java/Tomcat,Specialized Tool,"Users download a java-based thin client, which uses the tomcat site running on O2."
 ms.church.hms.harvard.edu,"Chou, Michael",mchou@genetics.med.harvard.edu,Y,N,Research connected,,?,?,Appears last updated in 2019
-netdecoder.hms.harvard.edu,"Lummertz da Rocha, Edroaldo",edroaldo@gmail.com,Y,Y,Research connected,Complete the retirement,PHP,Lab Site,"Site has unfixed errors, all identified contacts have closed accounts."
 neuroduo.hms.harvard.edu,"Harmin, David",david_harmin@hms.harvard.edu,Y,Y,Data sharing only,Consider for remaining on O2,Raw HTTP,File and Data,
 nhpdata.med.harvard.edu,"Combs, Monty",montgomery_combs@hms.harvard.edu,Y,Y,Business Workflow,Consider for alternate,PHP,Business Workflow,Workflow site for primate care.  Primary contact is Director of Systems and Services.
 o2portal.rc.hms.harvard.edu,"Karger, Amir",amir_karger@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,Complex,Specialized Tool,O2 cluster’s instance of Open On Demand
@@ -90,8 +81,6 @@ pcmtools.med.harvard.edu,"Feldmann, Douglas",douglas_feldmann@hms.harvard.edu,Y,
 pgpresearch.med.harvard.edu,"Church, George McDonald",george_church@hms.harvard.edu,Y,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML,Lab Site,Research Documentation Page
 pz.med.harvard.edu,"Pezaris, John S",pezaris.john@mgh.harvard.edu,Y,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML,Professional Site,Personal brochure site for Dr Pezaris
 q2m.hms.harvard.edu,"Mootha, Vamsi",vamsi@hms.harvard.edu,Y,N,Brochure Site,Complete the retirement,HTML,Program site,Questions in Quantitative Medicine program appears obsolete.
-rawproxytest.rc.hms.harvard.edu,"Feldmann, Douglas",douglas_feldmann@hms.harvard.edu,Y,N,DevOps Infrastructure,Complete the retirement,n/a,DevOps Infra,
-rc57.hms.harvard.edu,"Guell, Marc",mguell@genetics.med.harvard.edu n,Y,N,Not in use,Complete the retirement,n/a,,"No identified contacts have active accounts, site appears inactive."
 reagenttracker.hms.harvard.edu,"Erickson, Sean",Sean_Erickson@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,Gunicorn,Specialized Tool,ICCB-Longwood Reagent Tracker
 regan.med.harvard.edu,"Regan, Erzsébet Ravasz",eregan@wooster.edu,Y,Y,Brochure Site,Consider for alternate,HTML,Professional Site,Personal brochure site for Dr Regan
 regehr.med.harvard.edu,"Regehr, Wade G.",wade_regehr@hms.harvard.edu,Y,Y,Brochure Site,Consider for SaaS (WP or Drupal),PHP,Lab Site,Regehr lab website
@@ -127,6 +116,5 @@ www.gene2function.org,"Mohr, Stephanie",stephanie_mohr@hms.harvard.edu,Y,Y,Resea
 www.i2b2.org,"Kohane, Isaac",isaac_kohane@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,PHP,Specialized Tool,"ib2b site including Query and Analysis tool, custom PHP+Javascript"
 www.immgen.org,"Benoist, Christophe",cb@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,Java/Tomcat,Specialized Tool,"Numerous Data Browsers, Apache Tomcat + Java application"
 www.tbdb.io,Jorge Alberto Marchand Benmaman,marchand@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,HTML,Specialized Tool,T-box riboswitch annotation database online data browser
-xenopus-o2apps.hms.harvard.edu,"Peshkin, Leon",leonid_peshkin@hms.harvard.edu,Y,N,Not in use,Complete the retirement,n/a,n/a,Transition site for Orchestra to O2 migration
 xenopus.hms.harvard.edu,"Peshkin, Leon",leonid_peshkin@hms.harvard.edu,Y,Y,Research connected,Consider for remaining on O2,PHP+CGI,Specialized Tool,Data browser still active: https://xenopus.hms.harvard.edu/Embryo.html
 yin.hms.harvard.edu,"Yin, Peng",py@hms.harvard.edu,Y,Y,Brochure Site,Consider for SaaS (WP or Drupal),HTML,Lab Site,Brochure site
