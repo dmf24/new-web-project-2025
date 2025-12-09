@@ -125,34 +125,76 @@ def getalldbs():
         dbs = finddbs(site['name'])
         print(site['name'], ','.join([':'.join(db) for db in dbs]))
 
-def surveyq(field, values):
+def surveyq(field, values, negate=False):
     results = []
     for row in surveydata:
         site = dict(zip(header, row))
-        if site[field] in values:
+        if (site[field] in values) ^ negate:
             results.append((site[field], site['name']))
     return sorted(results)
 
-def surveyqi(field, values):
+def fieldchecker(site, field, values):
+    for value in values:
+        if value in site[field]:
+            return True
+    return False
+
+def surveyqi(field, values, negate=False):
     results = set([])
     for row in surveydata:
         site = dict(zip(header, row))
-        for value in values:
-            if value in site[field]:
-                results.add((site[field], site['name']))
+        if fieldchecker(site, field, values) ^ negate:
+            results.add((site[field], site['name']))
     return sorted(list(results))
 
-def showstuff(txt, field, values):
-    lst = surveyqi(field, values)
+def showstuff(txt, field, values, negate=False):
+    lst = surveyqi(field, values, negate=negate)
     print()
     print("%s:" % txt, len(lst))
     for x in lst:
         print("%s %s" % x)
 
-showstuff("Complex sites:", 'technology', ['Complex'])
-showstuff('Apache-based', 'technology', ['PHP', 'HTML', 'Raw HTTP', 'CGI'])
-showstuff('Appservers', 'technology', ['Gunicorn'])
-showstuff('Tomcat', 'technology', ['Tomcat'])
+def dotech():
+    Apache_based = ['PHP', 'HTML', 'Raw HTTP', 'CGI']
+    Complex = ['Complex', 'Posit Connect']
+    Webapp = ['Gunicorn', 'Ruby on Rails', 'Discourse (Ruby)']
 
-getalldbs()
+    showstuff("Complex sites", 'technology', Complex)
+    showstuff('Apache-based', 'technology', ['PHP', 'HTML', 'Raw HTTP', 'CGI'])
+    showstuff('Appservers', 'technology', Webapp)
+    showstuff('Cryosparc', 'technology', ['CryoSparc'])
+    showstuff('Tomcat', 'technology', ['Tomcat'])
+    showstuff('Remainder', 'technology', ['Tomcat', 'CryoSparc'] + Webapp + Complex + Apache_based, negate=True)
+
+def dositetype1():
+    sitetypes1 = ['Research connected',
+                  'Brochure Site',
+                  'Library',
+                  'DevOps Infrastructure',
+                  'Business Workflow',
+                  'Data sharing only']
+    for st in sitetypes1:
+        showstuff(st, 'site-type', [st])
+    showstuff('Remainder', 'site-type', sitetypes1, negate=True)
+
+
+def dositetype2():
+    sitetypes2 = ['Specialized Tool',
+                  'HPC',
+                  'Lab Site',
+                  'Posit Connect',
+                  'Forum Site',
+                  'Library Site',
+                  'File and Data',
+                  'Static Site',
+                  'Project site',
+                  '?']
+    for st in sitetypes2:
+        showstuff(st, 'site-type-2', [st])
+    showstuff('Remainder', 'site-type-2', sitetypes2, negate=True)
+
+
+#pp(surveydata)
+dositetype2()
+#getalldbs()
 #showstuff('blank', 'technology', [''])
