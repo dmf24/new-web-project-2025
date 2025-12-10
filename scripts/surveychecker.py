@@ -161,7 +161,7 @@ def dotech():
 
     showstuff("Complex sites", 'technology', Complex)
     showstuff('Apache-based', 'technology', ['PHP', 'HTML', 'Raw HTTP', 'CGI'])
-    showstuff('Appservers', 'technology', Webapp)
+    showstuff('Web Applications', 'technology', Webapp)
     showstuff('Cryosparc', 'technology', ['CryoSparc'])
     showstuff('Tomcat', 'technology', ['Tomcat'])
     showstuff('Remainder', 'technology', ['Tomcat', 'CryoSparc'] + Webapp + Complex + Apache_based, negate=True)
@@ -188,13 +188,25 @@ def dositetype2():
                   'File and Data',
                   'Static Site',
                   'Project site',
+                  'Business Workflow',
+                  'Education Site',
+                  'Professional Site',
                   '?']
     for st in sitetypes2:
         showstuff(st, 'site-type-2', [st])
     showstuff('Remainder', 'site-type-2', sitetypes2, negate=True)
 
+if __name__ == '__main__':
+    #pp(surveydata)
+    if '1' in sys.argv:
+        dositetype1()
+        print(' : ')
+    if '2' in sys.argv:
+        dositetype2()
+        print(' : ')
+    if 'tech' in sys.argv:
+        dotech()
+        print(' : ')
 
-#pp(surveydata)
-dositetype2()
-#getalldbs()
-#showstuff('blank', 'technology', [''])
+    #getalldbs()
+    #showstuff('blank', 'technology', [''])
